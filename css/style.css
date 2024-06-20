@@ -1,1 +1,78 @@
+/* リセットスタイル */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* グローバルスタイル */
+
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: medium;
+}
+
+html {
+  font-size: medium;
+}
+
+/* ヘッダー */
+/* プロパティはアルファベット順で記載する */
+
+.header__wrapper {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  height: 40vh;
+  min-height: 200px;
+}
+
+.header__background {
+  background-image: url('/images/header__background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.header__item {
+  align-items: center;
+  display: flex;
+}
+
+.header__profile-image {
+  border-radius: 50%;
+  height: 140px;
+  object-fit: cover;
+  width: 140px;
+}
+
+.header__information {
+  margin-left: 1rem;
+}
+
+.header__name {
+  color: white;
+  font-size: xxx-large;
+  font-weight: bold;
+}
+
+.header__description {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 6fr; /* font awesomeと文章の間隔がちょうど良い幅になるため */
+}
+
+.header__location-icon,
+.header__pc-icon {
+  align-content: center;
+  color: white;
+}
+
+.header__address,
+.header__job {
+  align-content: center;
+  color: white;
+  font-weight: bold;
+}
