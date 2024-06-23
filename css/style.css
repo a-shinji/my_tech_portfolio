@@ -76,3 +76,99 @@ html {
   color: white;
   font-weight: bold;
 }
+
+/* タイムライン */
+
+.timeline__wrapper {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+}
+
+.timeline {
+  margin-top: 30px;
+  list-style: none;
+  position: relative;
+}
+
+/* タイムラインのライン */
+
+.timeline::before {
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 1px;
+  background: gray;
+}
+
+.timeline > li {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* タイムラインのアイコン */
+
+.timeline > li .timeline__icon {
+  background-color: gray;
+  height: 60px;
+  position: relative;
+  width: 60px;
+  margin-left: -30px; /* ライン部分にちょうどよく重なる値をセット */
+  border-radius: 50%;
+}
+
+/* ビルのアイコン専用の設定 */
+/* NOTE：異なるアイコンを使う場合は都度設定値を変更 */
+
+.timeline > li .timeline__icon i__building {
+  color: white;
+  font-size: xx-large;
+  position: absolute;
+  transform: translate(75%, 45%);
+}
+
+/* ビーチパラソルのアイコン専用の設定 */
+
+.timeline > li .timeline__icon i__umbrella-beach {
+  color: white;
+  font-size: xx-large;
+  position: absolute;
+  transform: translate(35%, 40%);
+}
+
+/* タイムラインの詳細 */
+
+.timeline > li .timeline__discription {
+  font-size: 1.2em;
+  margin-left: 5%;
+  margin-top: -65px;
+  position: relative;
+}
+
+.timeline__heading {
+  align-items: center;
+  display: flex;
+}
+
+.timeline__title {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.timeline__term {
+  color: gray;
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.timeline__year-month {
+  color: gray;
+  font-size: small;
+  padding-left: 2px;
+}
+
+.timeline__text {
+  margin-top: 10px;
+  padding-left: 20px;
+}
