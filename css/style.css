@@ -136,6 +136,33 @@ html {
   transform: translate(35%, 40%);
 }
 
+/* コードのアイコン専用の設定 */
+
+.timeline > li .timeline__icon i__code {
+  color: white;
+  font-size: xx-large;
+  position: absolute;
+  transform: translate(28%, 45%);
+}
+
+/* 飛行機のアイコン専用の設定 */
+
+.timeline > li .timeline__icon i__plane {
+  color: white;
+  font-size: xx-large;
+  position: absolute;
+  transform: translate(40%, 45%);
+}
+
+/* 学校のアイコン専用の設定 */
+
+.timeline > li .timeline__icon i__school {
+  color: white;
+  font-size: xx-large;
+  position: absolute;
+  transform: translate(26%, 40%);
+}
+
 /* タイムラインの詳細 */
 
 .timeline > li .timeline__discription {
