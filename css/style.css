@@ -199,3 +199,49 @@ html {
   margin-top: 10px;
   padding-left: 20px;
 }
+
+/* スキル */
+.skillcard__wrapper{
+  align-content: center;
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+}
+.skillcard__contener {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skillcard {
+  background-color: white;
+  box-shadow: 0 2px 5px #ccc;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position:relative;
+  width: 150px;
+}
+.skillcard__image {
+  height: 50px;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+  position:absolute;
+  transform: translate(100%, 60%);
+  width: 50px;
+}
+.skillcard__content {
+  display: flex;
+  position: absolute;
+  transform: translate(55%, 400%);
+}
+/* ステップバー */
+.progressbar__item {
+  background-color: #ccc;
+  height: 20px;
+  margin: 2px;
+  width: 20px;
+}
+.progressbar__item-active {
+  background-color: orange;
+  height: 20px;
+  margin: 2px;
+  width: 20px;
+}
