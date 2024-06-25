@@ -205,6 +205,8 @@ html {
   align-content: center;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 .skillcard__contener {
   display: flex;
