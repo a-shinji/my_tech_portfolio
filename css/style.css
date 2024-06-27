@@ -77,6 +77,24 @@ html {
   font-weight: bold;
 }
 
+/* 職務要約 */
+.job_summary__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+.job_summary__title {
+  font-size: xx-large;
+  font-weight: bold;
+}
+.job_summary__content ul li {
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
+  font-size: large;
+  list-style-type: none;
+}
+
 /* タイムライン */
 
 .timeline__wrapper {
