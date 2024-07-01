@@ -219,12 +219,6 @@ html {
 }
 
 /* 業務経験 */
-.work_experience__wrapper {
-  display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
-  margin-bottom: 7rem;
-  margin-top: 7rem;
-}
 .work_experience__modal-open {
   cursor:pointer;
   font-size: large;
@@ -271,6 +265,23 @@ html {
 }
 .work_experience__modal-content ul{
   margin-left: 20px;
+}
+.work_experience__contener {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work_experience__skillcard {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px #ccc;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  position:relative;
+  width: 200px;
 }
 
 /* スキル */
