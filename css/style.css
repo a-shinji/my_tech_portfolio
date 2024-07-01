@@ -218,6 +218,61 @@ html {
   padding-left: 20px;
 }
 
+/* 業務経験 */
+.work_experience__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  margin-bottom: 7rem;
+  margin-top: 7rem;
+}
+.work_experience__modal-open {
+  cursor:pointer;
+  font-size: large;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.work_experience__modal-open--non-cursor {
+  font-size: large;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.work_experience__modal {
+  background-color: rgba(0,0,0,50%);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  padding: 100px 20px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: .3s;
+  visibility: hidden;
+  width: 100%;
+}
+.work_experience__modal.is-active{
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+.work_experience__modal-container{
+  display: inline-block;
+  min-width: 300px;
+  position: relative;
+  vertical-align: middle;
+  width: 70%;
+}
+.work_experience__modal-content{
+  background: #fff;
+  line-height: 1.8;
+  padding: 40px;
+  text-align: left;
+}
+.work_experience__modal-content ul{
+  margin-left: 20px;
+}
+
 /* スキル */
 .skillcard__wrapper{
   align-content: center;
