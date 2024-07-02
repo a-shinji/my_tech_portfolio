@@ -274,6 +274,11 @@ body {
   margin-top: 7rem;
   margin-bottom: 7rem;
 }
+.skillcard-title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 .skillcard__contener {
   display: flex;
   flex-wrap: wrap;
