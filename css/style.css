@@ -7,16 +7,19 @@
 }
 
 /* グローバルスタイル */
-
 body {
-  background-color: #f0f0f0;
-  color: #333;
-  font-family: Arial, sans-serif;
-  line-height: medium;
-}
-
-html {
-  font-size: medium;
+  background-color: #f5f5f5;
+  color: #3a3a3a;
+  body {
+    /* NOTE: https://ics.media/entry/200317/ */
+    font-family: "Helvetica Neue",
+      Arial,
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      "BIZ UDPGothic",
+      Meiryo,
+      sans-serif;
+  }
 }
 
 /* ヘッダー */
