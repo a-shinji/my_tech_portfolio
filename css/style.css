@@ -367,9 +367,8 @@ body {
   width: 50px;
 }
 .certification__content {
-  display: flex;
-  position: absolute;
-  transform: translate(40%, 350%);
+  text-align: center;
+  margin-top: 95px;
 }
 .certification__year-month {
   font-size: large;
