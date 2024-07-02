@@ -107,6 +107,7 @@ body {
 .timeline-title {
   font-size: xx-large;
   font-weight: bold;
+  margin-bottom: -20px;
 }
 .timeline {
   margin-top: 30px;
@@ -271,8 +272,8 @@ body {
   align-content: center;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
-  margin-top: 7rem;
-  margin-bottom: 7rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .skillcard-title {
   font-size: xx-large;
@@ -336,8 +337,8 @@ body {
   align-content: center;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
-  margin-top: 7rem;
-  margin-bottom: 7rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .certification-title {
   font-size: xx-large;
