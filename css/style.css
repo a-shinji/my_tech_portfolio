@@ -433,5 +433,6 @@ body {
 .self-promotion__competitive_programming-image {
   height: 150px;
   object-fit: contain;
+  width: 211px;
   transition: 0.3;
 }
