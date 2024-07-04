@@ -374,3 +374,57 @@ body {
   font-size: large;
   font-weight: bold;
 }
+
+/* 実績 */
+.self-promotion__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.self-promotion__title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.self-promotion__blog {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px #ccc;
+  color: inherit;
+  display: flex;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+  top: 0px;
+  transition: 0.3s;
+}
+.self-promotion__blog:hover {
+  align-items: center;
+  box-shadow: 0 0px 0px #ccc;
+  color: white;
+  background-color: #3a3a3a;
+  cursor:pointer;
+  display: flex;
+  top: 5px;
+}
+.self-promotion__blog-image {
+  height: 150px;
+  object-fit: contain;
+  width: 211px;
+  transition: 0.3;
+}
+.self-promotion__blog-image.invert-color {
+  filter: invert(100%);
+  transition: 0.3;
+}
+.self-promotion__content-title {
+  font-size: large;
+  font-weight: bold;
+}
+.self-promotion__discription {
+  margin-left: 25px;
+}
+.self-promotion__content-text ul {
+  margin-left: 25px;
+}

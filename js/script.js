@@ -23,3 +23,19 @@ setupModal('.work_experience__js-modal--ev', '.work_experience__js-modal-open--e
 setupModal('.work_experience__js-modal--ai', '.work_experience__js-modal-open--ai');
 setupModal('.work_experience__js-modal--soccer', '.work_experience__js-modal-open--soccer');
 
+const target = document.querySelector('.self-promotion__blog')
+const targetImage = document.querySelector('.self-promotion__blog-image')
+function invertColor() {
+  if (!targetImage.classList.contains('invert-color')) {
+    targetImage.classList.add('invert-color');
+  }
+}
+function revertColor() {
+  if (targetImage.classList.contains('invert-color')) {
+    targetImage.classList.remove('invert-color');
+  }
+}
+target.addEventListener('mouseover', invertColor);
+target.addEventListener('mouseout', revertColor);
+
+
