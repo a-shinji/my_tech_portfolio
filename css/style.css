@@ -387,12 +387,14 @@ body {
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.self-promotion__blog {
+.self-promotion__blog,
+.self-promotion__competitive_programming {
   align-items: center;
   background-color: white;
   box-shadow: 0 2px 5px #ccc;
   color: inherit;
   display: flex;
+  margin: 10px;
   padding: 20px;
   position: relative;
   text-decoration: none;
@@ -427,4 +429,10 @@ body {
 }
 .self-promotion__content-text ul {
   margin-left: 25px;
+}
+.self-promotion__competitive_programming-image {
+  height: 150px;
+  object-fit: contain;
+  width: 211px;
+  transition: 0.3;
 }
