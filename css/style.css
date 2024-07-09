@@ -46,9 +46,9 @@ body {
 
 .header__profile-image {
   border-radius: 50%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
-  width: 140px;
+  width: 160px;
 }
 
 .header__information {
@@ -74,10 +74,17 @@ body {
 }
 
 .header__address,
-.header__job {
+.header__job,
+.header__github {
   align-content: center;
   color: white;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.header__github:hover {
+  color: #3a3a3a;
+  transition: 0.3s;
 }
 
 /* 職務要約 */
