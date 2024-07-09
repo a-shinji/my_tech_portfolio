@@ -38,4 +38,11 @@ function revertColor() {
 target.addEventListener('mouseover', invertColor);
 target.addEventListener('mouseout', revertColor);
 
-
+// 
+// フッターに表示している著作権に関する表記の年度を取得するための処理
+// 
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  document.getElementById('current-year').textContent = year;
+});
