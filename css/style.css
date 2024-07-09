@@ -24,7 +24,6 @@ body {
 
 /* ヘッダー */
 /* プロパティはアルファベット順で記載する */
-
 .header__wrapper {
   align-content: center;
   display: grid;
@@ -32,52 +31,50 @@ body {
   height: 40vh;
   min-height: 200px;
 }
-
 .header__background {
   background-image: url('../images/header__background.jpg');
   background-position: center;
   background-size: cover;
 }
-
 .header__item {
   align-items: center;
   display: flex;
 }
-
 .header__profile-image {
   border-radius: 50%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
-  width: 140px;
+  width: 160px;
 }
-
 .header__information {
   margin-left: 1rem;
 }
-
 .header__name {
   color: white;
   font-size: xxx-large;
   font-weight: bold;
 }
-
 .header__description {
   align-content: center;
   display: grid;
   grid-template-columns: 1fr 6fr; /* font awesomeと文章の間隔がちょうど良い幅になるため */
 }
-
 .header__location-icon,
 .header__pc-icon {
   align-content: center;
   color: white;
 }
-
 .header__address,
-.header__job {
+.header__job,
+.header__github {
   align-content: center;
   color: white;
   font-weight: bold;
+  text-decoration: none;
+}
+.header__github:hover {
+  color: #3a3a3a;
+  transition: 0.3s;
 }
 
 /* 職務要約 */
