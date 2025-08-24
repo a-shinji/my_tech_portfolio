@@ -1,6 +1,6 @@
 # my_tech_portfolio
 - URL
-  - https://a-shinji.github.io/my_tech_portfolio/ 
+  - https://a-shinji.github.io/my_tech_portfolio/
 - エンジニアとしてのスキルを公開できるようにするためのプロジェクト
 - github pagesを使用して公開
 
