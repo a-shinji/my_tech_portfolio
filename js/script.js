@@ -22,6 +22,7 @@ setupModal('.work_experience__js-modal--wellness', '.work_experience__js-modal-o
 setupModal('.work_experience__js-modal--ev', '.work_experience__js-modal-open--ev');
 setupModal('.work_experience__js-modal--ai', '.work_experience__js-modal-open--ai');
 setupModal('.work_experience__js-modal--soccer', '.work_experience__js-modal-open--soccer');
+setupModal('.work_experience__js-modal--aurora', '.work_experience__js-modal-open--aurora');
 
 const target = document.querySelector('.self-promotion__blog')
 const targetImage = document.querySelector('.self-promotion__blog-image')
