@@ -121,6 +121,59 @@
                   <li>また非エンジニアからのシステムの状況に関する質問（このボタンの挙動はどうなっていますか？etc）も、AIエージェントに質問してもらうことで、一次対応をAIエージェントに任せることができた</li>
                 </ul>
               </ul>
+              <li>Railsアプリ側で脳波データの展開を行うとメモリを圧迫するため、解析コンテナでのみBDFファイルを展開するように対応</li>
+              <ul>
+                <li>問題点</li>
+                <ul>
+                  <li>参考にできる既存のシステムがあり、そのシステムではRailsのコントローラーで、直接、大容量(300MB程度)のファイルを受け取って処理していた</li>
+                  <li>まずは最低限動くことが目標となっていたため、既存システムのように、Railsのコントローラーで直接ファイルを受ける形を踏襲することになった</li>
+                  <li>しかしパフォーマンステスト(同時に10個のファイルがアップロード)の結果、コンテナのI/Oが張り付き、パフォーマンス低下して無視できないレベルのページ処理速度になることが発覚した</li>
+                </ul>
+                <li>工夫</li>
+                <ul>
+                  <li>そもそもAPIでのやり取りで大容量のファイルがやり取りされることを避けるため、Railsコンテナでは脳波データを展開しない構成を提案</li>
+                  <li>またRails側で脳波データを展開する必要がないこと & Railsアプリ側で展開することで、単一責任の原則からも外れることを主張</li>
+                  <li>解析コンテナ側でBDFファイルのバリデーションや、BDFファイルの処理ロジックをまとめる形に修正した</li>
+                </ul>
+                <li>結果</li>
+                <ul>
+                  <li>解析側のコードはpythonで書かれており、処理の内容など理解できていなかったが、これを機にpythonを勉強し、処理ロジックや、作法を理解できた</li>
+                  <li>メインのRailsアプリのパフォーマンス問題は改善され、快適な操作ができるようになった</li>
+                  <li>ビジネス側の要求をのむ形になったが、問題が起こることはわかっていたので、すぐにパフォーマンステストをし、問題を目の前で起こすことでビジネスサイドにも技術的な問題やその解決の重要性を理解してもらえた</li>
+                </ul>
+              </ul>
+              <li>デザインレビューのために、デザインを勉強し、ドロップダウンリスト等の要素表示について提案し実行</li>
+              <ul>
+                <li>問題点</li>
+                <ul>
+                  <li>自分のデザイン力が皆無</li>
+                  <li>画面のデザインやUI/UXについて、モック作成時に考慮することが多いが、どうあるべきなのかよくわからない</li>
+                  <li>例えば、ドロップダウンのリスト一つとっても、非常にリストの数が多くなり、要素の把握が難しくなるパターンなどが考えられたが、どう対応したら良いかわからない</li>
+                </ul>
+                <li>工夫</li>
+                <ul>
+                  <li>デザインの基本的なものから勉強（本: なるほどデザインetc, UIデザイン）</li>
+                  <li>どうするとUI/UXが良いものになるかを、AIエージェントや、LLMを使用して壁打ち</li>
+                  <li>業務委託のデザイナーさんに、画面モックの状態で、なるべくはやく会話し、いくつかのパターンを出しつつ、要素のブラッシュアップ</li>
+                </ul>
+                <li>結果</li>
+                <ul>
+                  <li>Figmaを使ってデザインの要素を作成・操作できるようになった</li>
+                  <li>デザイナーさんが作成してくださったデザインのレビューを行い、UI上の表記ゆれといった表面上のものから、要素がどこに配置されているべきかといったレビューを行うことができるようになった</li>
+                  <li>リスト数の多いドロップダウンは、検索窓付きのドロップダウンとすることで、対応することができた</li>
+                </ul>
+              </ul>
+            </ul>
+            <li>使用技術</li>
+            <ul>
+              <li>Ruby / Ruby on Rails</li>
+              <li>Python</li>
+              <li>PostgreSQL</li>
+              <li>AWS (ECS, Fargate, S3, RDS)</li>
+              <li>Docker</li>
+              <li>GitHub Actions</li>
+              <li>Figma</li>
+              <li>AIエージェント (Devin)</li>
             </ul>
             <li>チームの規模</li>
             <ul>
@@ -561,36 +614,36 @@
         <div class="timeline-title">
           職務経歴
         </div>
-        <li>
-          <div class="timeline__icon">
-            <i__building class="fa-solid fa-building"></i__building>
-          </div>
-          <div class="timeline__discription">
-            <div class="timeline__heading">
-              <div class="timeline__title">
-                フリーランス
-              </div>
-              <div class="timeline__term">
-                ~ 現在まで
-              </div>
-            </div>
-            <div class="timeline__year-month">
-              2024/07 ~ 現在
-            </div>
-            <div class="timeline__text">
-              <ul>
-                <li>フリーランスとして、Web系の案件に従事</li>
-                <li>上流から下流、インフラ周り等も一気通貫で対応</li>
-                <div class="work_experience__contener">
-                  <div class="work_experience__skillcard work_experience__modal-open work_experience__js-modal-open--aurora">
-                    脳波データ測定における管理サイトおよび脳はデータ解析フローの構築
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </div>
-        </li>
         <ul class="timeline">
+          <li>
+            <div class="timeline__icon">
+              <i__building class="fa-solid fa-building"></i__building>
+            </div>
+            <div class="timeline__discription">
+              <div class="timeline__heading">
+                <div class="timeline__title">
+                  フリーランス
+                </div>
+                <div class="timeline__term">
+                  ~ 現在まで
+                </div>
+              </div>
+              <div class="timeline__year-month">
+                2024/07 ~ 現在
+              </div>
+              <div class="timeline__text">
+                <ul>
+                  <li>フリーランスとして、Web系の案件に従事</li>
+                  <li>上流から下流、インフラ周り等も一気通貫で対応</li>
+                  <div class="work_experience__contener">
+                    <div class="work_experience__skillcard work_experience__modal-open work_experience__js-modal-open--aurora">
+                      脳波データ測定における管理サイトおよび脳はデータ解析フローの構築
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li>
             <div class="timeline__icon">
               <i__building class="fa-solid fa-building"></i__building>
@@ -1077,27 +1130,6 @@
               </div>
             </div>
           </a>
-          <div class="self-promotion__competitive_programming">
-            <img class="self-promotion__competitive_programming-image" src="images/competitive_programming.png" alt="competitive_programming">
-            <div class="self-promotion__discription">
-              <div class="self-promotion__content-title">
-                競技プログラミング
-              </div>
-              <div class="self-promotion__content-text">
-                <ul>
-                  <li>
-                    スキルをアップさせたいと思ったことがきっかけで開始。paizaを使用
-                  </li>
-                  <li>
-                    2024年に入ってからは毎日継続。解けなかった問題も解けるように
-                  </li>
-                  <li>
-                    Rate 1800まで到達。ランクはB（2024/07/04現在）
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div></div>

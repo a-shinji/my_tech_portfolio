@@ -1,6 +1,6 @@
 function setupModal(modalSelector, openButtonSelector) {
   const modal = document.querySelector(modalSelector)
-  const openButton = document.querySelector(openButtonSelector)
+  const openButtons = document.querySelectorAll(openButtonSelector)
 
   function modalOpen() {
     if (!modal.classList.contains('is-active')) {
@@ -14,7 +14,9 @@ function setupModal(modalSelector, openButtonSelector) {
     }
   }
 
-  openButton.addEventListener('click', modalOpen);
+  openButtons.forEach(button => {
+    button.addEventListener('click', modalOpen);
+  });
   modal.addEventListener('click', modalClose);
 }
 
